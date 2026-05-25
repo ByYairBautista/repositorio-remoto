@@ -1,59 +1,56 @@
-# Angilar
+# AngiGit
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.12.
+> **Estado:** En desarrollo  
+> **Autor:** YairB
 
-## Development server
+Un proyecto personal para dominar **Git** y **GitHub**.
 
-To start a local development server, run:
+Este repositorio actúa como mi laboratorio de pruebas, donde implemento nuevas funcionalidades en Angular mientras perfecciono el flujo de trabajo con control de versiones.
+
+---
+
+## Objetivo
+
+Aprender a utilizar un flujo de trabajo profesional con **Git** y **GitHub**.
+
+---
+
+## Qué incluye
+
+Por el momento, el proyecto cuenta con:
+
+- [x] Estructura base de Angular moderna.
+- [x] Componente `Home` funcional.
+- [x] Uso de **Signals** para gestión de estado.
+- [x] Rutas básicas configuradas.
+- [ ] Próximamente: integración de APIs, formularios y despliegue.
+
+---
+
+## Tecnologías
+
+- **Angular 21.2.12**
+- **TypeScript**
+- **Git & GitHub**
+- **Visual Studio Code**
+- **Signals** (reactividad moderna)
+
+---
+
+## Cómo ejecutarlo
+
+Sigue estos pasos para correr el proyecto en tu máquina local:
 
 ```bash
+# 1. Clona el repositorio
+git clone https://github.com/YairB/AngiGit.git
+
+# 2. Entra al proyecto
+cd AngiGit
+
+# 3. Instala las dependencias
+npm install
+
+# 4. Inicia el servidor de desarrollo
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

@@ -1,0 +1,254 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Interfaz</title>
+    <style>
+      /* Reset y estilos base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f5f7fa;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Header */
+      header {
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #4a6bff;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin-left: 1.5rem;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #555;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #4a6bff;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, #4a6bff, #6a5acd);
+        color: #fff;
+        text-align: center;
+        padding: 4rem 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: #fff;
+        color: #4a6bff;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Features Section */
+      .features {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem 3rem;
+      }
+
+      .features h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: #333;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature-card {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-card h3 {
+        color: #4a6bff;
+        margin-bottom: 0.8rem;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 1rem 0;
+      }
+
+      .footer-links li {
+        margin: 0 1rem;
+      }
+
+      .footer-links a {
+        color: #ccc;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: #fff;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav ul {
+          margin-top: 1rem;
+        }
+
+        nav ul li {
+          margin: 0 0.7rem;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">MiSitio</div>
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Bienvenido a MiSitio</h1>
+      <p>
+        Descubre todo lo que tenemos para ofrecerte. Somos tu mejor opción para soluciones
+        innovadoras y de calidad.
+      </p>
+      <a href="#" class="btn">Explorar más</a>
+    </section>
+
+    <section class="features">
+      <h2>Nuestros Servicios</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Diseño Web</h3>
+          <p>
+            Creamos sitios web modernos y adaptables a cualquier dispositivo, con un enfoque en la
+            experiencia del usuario.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Desarrollo de Software</h3>
+          <p>
+            Soluciones de software a medida para optimizar los procesos de tu empresa y aumentar la
+            productividad.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Marketing Digital</h3>
+          <p>
+            Estrategias de marketing digital para ayudarte a llegar a más clientes y aumentar tus
+            ventas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 MiSitio. Todos los derechos reservados.</p>
+      <ul class="footer-links">
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Términos de Servicio</a></li>
+        <li><a href="#">Contáctanos</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
