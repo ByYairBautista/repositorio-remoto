@@ -1,14 +1,19 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { ModalProductsComponent } from '../modal-products/modal-products';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [
+    CommonModule,
+    ModalProductsComponent
+  ],
   templateUrl: './home.html',
-  styles: `
-    :host {
-      display: block;
-    }
-  `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Home {}
+export class Home {
+
+  showModal = false;
+
+}

@@ -200,7 +200,7 @@
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Servicios</a></li>
             <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -212,7 +212,9 @@
         Descubre todo lo que tenemos para ofrecerte. Somos tu mejor opción para soluciones
         innovadoras y de calidad.
       </p>
-      <a href="#" class="btn">Explorar más</a>
+      <button class="btn" (click)="showModal = true">
+  Agregar Producto
+</button>
     </section>
 
     <section class="features">
@@ -250,5 +252,10 @@
         <li><a href="#">Contáctanos</a></li>
       </ul>
     </footer>
+    <app-modal-products
+  *ngIf="showModal"
+  (close)="showModal = false">
+</app-modal-products>
   </body>
+
 </html>

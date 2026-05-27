@@ -1,0 +1,60 @@
+<div class="container">
+
+    <h1>Productos</h1>
+
+    <button 
+        class="btn-add"
+        (click)="showModal = true">
+
+        + Agregar Producto
+
+    </button>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>Laptop HP</td>
+                <td>Electrónica</td>
+                <td>$12,500</td>
+                <td>15</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Mouse Gamer</td>
+                <td>Accesorios</td>
+                <td>$850</td>
+                <td>40</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Teclado Mecánico</td>
+                <td>Accesorios</td>
+                <td>$1,200</td>
+                <td>25</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<app-modal-products
+    *ngIf="showModal"
+    (close)="showModal = false">
+</app-modal-products>
