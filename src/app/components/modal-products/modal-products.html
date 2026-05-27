@@ -8,18 +8,82 @@
 
         <h2>Agregar Producto</h2>
 
-        <form>
+        <form #productForm="ngForm">
 
-            <input type="text" placeholder="Nombre del producto">
+            <!-- NOMBRE -->
+            <input
+                type="text"
+                placeholder="Nombre del producto"
+                name="nombre"
+                [(ngModel)]="producto.nombre"
+                required
+                #nombre="ngModel">
 
-            <input type="text" placeholder="Categoría">
+            <div class="error"
+                *ngIf="nombre.invalid && nombre.touched">
 
-            <input type="number" placeholder="Precio">
+                El nombre es obligatorio
 
-            <input type="number" placeholder="Stock">
+            </div>
 
-            <button type="button" (click)="saveProduct()">
+            <!-- CATEGORIA -->
+            <input
+                type="text"
+                placeholder="Categoría"
+                name="categoria"
+                [(ngModel)]="producto.categoria"
+                required
+                #categoria="ngModel">
+
+            <div class="error"
+                *ngIf="categoria.invalid && categoria.touched">
+
+                La categoría es obligatoria
+
+            </div>
+
+            <!-- PRECIO -->
+            <input
+                type="number"
+                placeholder="Precio"
+                name="precio"
+                [(ngModel)]="producto.precio"
+                required
+                min="1"
+                #precio="ngModel">
+
+            <div class="error"
+                *ngIf="precio.invalid && precio.touched">
+
+                El precio debe ser mayor a 0
+
+            </div>
+
+            <!-- STOCK -->
+            <input
+                type="number"
+                placeholder="Stock"
+                name="stock"
+                [(ngModel)]="producto.stock"
+                required
+                min="0"
+                #stock="ngModel">
+
+            <div class="error"
+                *ngIf="stock.invalid && stock.touched">
+
+                El stock no puede ser negativo
+
+            </div>
+
+            <!-- BOTON -->
+            <button
+                type="button"
+                [disabled]="productForm.invalid"
+                (click)="saveProduct()">
+
                 Guardar Producto
+
             </button>
 
         </form>
